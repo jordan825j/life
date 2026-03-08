@@ -5,19 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>重劍人生複利與哲學</title>
     <style>
-        body { margin: 0; padding: 0; font-family: "Microsoft JhengHei", sans-serif; background-color: #f0f2f5; overflow: hidden; }
-        header { background: #2c3e50; color: white; text-align: center; padding: 15px 0; font-size: 1.5rem; letter-spacing: 2px; }
+        /* 背景設定：山海美景，營造舒適退休感 */
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: "Microsoft JhengHei", sans-serif; 
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* 標題設定：深藍色、粗體、帶一點白色半透明背景增加可讀性 */
+        header { 
+            background: rgba(255, 255, 255, 0.7); /* 半透明白底，讓背景山色透出來 */
+            color: #003366; /* 深藍色 */
+            text-align: center; 
+            padding: 25px 0; 
+            font-size: 2.2rem; 
+            font-weight: bold; /* 粗體 */
+            letter-spacing: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
         .container { 
+            flex: 1;
             display: flex; 
             justify-content: center; 
-            height: calc(100vh - 60px); /* 扣掉 header 的高度 */
-            padding: 0; 
+            padding: 20px;
+            box-sizing: border-box;
         }
+
+        /* 內嵌文件框設定 */
         iframe { 
             width: 100%; 
-            height: 100%; /* 強制填滿容器 */
+            max-width: 1000px; 
+            height: 100%;
             border: none; 
-            background: white; 
+            background: rgba(255, 255, 255, 0.95); /* 讓文件底色稍微透一點背景，更融合 */
+            border-radius: 12px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* 手機版適應 */
+        @media (max-width: 600px) {
+            header { font-size: 1.5rem; padding: 15px 0; }
         }
     </style>
 </head>
